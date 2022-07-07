@@ -1,4 +1,4 @@
-GO V KROVATKY?
+GO V KROVATKY? Тут нету кроватки но есть...
 
 
 
