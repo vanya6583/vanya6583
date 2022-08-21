@@ -1,0 +1,391 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("Сало скрипт (ержык)", "RJTheme1")
+
+local Tab = Window:NewTab("Игрок")
+
+local Section = Tab:NewSection("Скорость")
+
+Section:NewButton("Скорость обычная", "Изменяет скорость на обычную", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    
+end)
+
+Section:NewButton("Скорость 25", "Изменяет скорость на 25", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+    
+end)
+
+Section:NewButton("Скорость 50", "Изменяет скорость на 50", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+
+end)
+Section:NewButton("Скорость 100", "Изменяет скорость на 100", function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+
+end)
+local Section = Tab:NewSection("Прыжок")
+
+Section:NewButton("Прыжок обичный", "Изменяет силу прыжка на обичный", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+
+end)
+Section:NewButton("Прыжок 70", "Изменяет силу прыжка на 70", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
+
+end)
+Section:NewButton("Прыжок 100", "Изменяет силу прыжка на 100.", function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+
+end)
+local Section = Tab:NewSection("Разное")
+
+Section:NewToggle("Бексонечный прыжок", "Прыгай в воздухе", function(state)
+    if state then
+        _G.infinjump = true
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+if _G.infinjump then
+if k:byte() == 32 then
+Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+Humanoid:ChangeState("Jumping")
+wait(0.1)
+Humanoid:ChangeState("Seated")
+end
+end
+end)
+    else
+        _G.infinjump = false
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+if _G.infinjump then
+if k:byte() == 32 then
+Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+Humanoid:ChangeState("Jumping")
+wait(0.1)
+Humanoid:ChangeState("Seated")
+end
+end
+end)
+    end
+end)
+
+Section:NewButton("Крутитися 0", "Ну что могу сказать? Spin Spin Spin", function()
+power = 0
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+end)
+Section:NewButton("Крутитися 50", "Ну что могу сказать? Spin Spin Spin", function()
+power = 50 
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+end)
+Section:NewButton("Крутитися 200", "Ну что могу сказать? Spin Spin Spin", function()
+power = 200 
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+end)
+local Tab = Window:NewTab("Телепорт")
+
+local Section = Tab:NewSection("Башни низ")
+
+Section:NewButton("Синяя Башня низ", "Телепорт к синей башне", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6.754860877990723, 23.600034713745117, 127.21406555175781)
+end)
+Section:NewButton("Красная Башня низ", "крч вы понели? Дя?", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-132.31507873535156, 23.60004425048828, -0.44465380907058716)
+end)
+Section:NewButton("Зеленая башня низ", "Тп на базу шрека", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.4617762565612793, 23.600013732910156, -127.0892333984375)
+end)
+Section:NewButton("Желтая башня низ", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(131.30059814453125, 23.600013732910156, 5.165349006652832)
+end)
+
+local Section = Tab:NewSection("Башни вверх")
+Section:NewButton("Желтая башня вверх", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.623291015625, 129.1998748779297, 0.20939277112483978)
+end)
+Section:NewButton("Синяя башня вверх", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.7494234442710876, 129.19985961914062, 100.97635650634766)
+end)
+Section:NewButton("Красная башня вверх", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-101.571044921875, 129.1998748779297, 0.02412746287882328)
+end)
+Section:NewButton("Зеленая башня вверх", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2.059662342071533, 129.19985961914062, -101.22891998291016)
+end)
+local Section = Tab:NewSection("Разное")
+Section:NewButton("Середина карты", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.4194936156272888, 131.39996337890625, -0.034309759736061096)
+end)
+Section:NewButton("Карта спектаторов", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14.594708442687988, 326.5445861816406, 1.3450276851654053)
+end)
+local Tab = Window:NewTab("Разное")
+
+local Section = Tab:NewSection("Визуальные скрипты")
+Section:NewButton("3 рейх", "Ты стал пропогандировать свастику", function()
+local Player = game.Players.LocalPlayer
+local RenderStepped = game.RunService.RenderStepped
+local HumanoidRootPart = Player.Character:WaitForChild("HumanoidRootPart", 5)
+ 
+function CharacterPosition(p, a, b, c, x, y, z)
+    local BodyForce = Instance.new("BodyForce")
+    BodyForce.Force = Vector3.new(0, 196.2, 0) * p:GetMass()
+    BodyForce.Parent = p
+    
+    RenderStepped:Connect(function()
+        p.CFrame = HumanoidRootPart.CFrame * CFrame.new(a, b, c) * CFrame.Angles(x, y, z)
+    end)
+    
+    p:BreakJoints()
+end
+ 
+CharacterPosition(Player.Character["Left Arm"], -1, 1.5, 0, 0, 0, math.rad(-90))
+CharacterPosition(Player.Character["Right Arm"], 1.5, 1, 0, 0, 0, math.rad(180))
+CharacterPosition(Player.Character["Left Leg"], -1.5, -1, 0, 0, 0, math.rad(0))
+CharacterPosition(Player.Character["Right Leg"], 1, -1.5, 0, 0, 0, math.rad(90))
+
+end)
+Section:NewButton("Не знаю что ето", "Думаю ето что то...", function()
+c = script:Clone()
+c.Parent = game.Lighting
+s = Instance.new("Sky")
+s.Name = "loltroll"
+s.SkyboxBk = "http://www.roblox.com/asset/?id=343377230"
+s.SkyboxDn = "http://www.roblox.com/asset/?id=343377230"
+s.SkyboxFt = "http://www.roblox.com/asset/?id=343377230"
+s.SkyboxLf = "http://www.roblox.com/asset/?id=343377230"
+s.SkyboxRt = "http://www.roblox.com/asset/?id=343377230"
+s.SkyboxUp = "http://www.roblox.com/asset/?id=343377230"
+s.Parent = game.Lighting
+ 
+while true do
+wait(0.225555)
+t = game.Teams:GetChildren()
+for i = 1, #t do
+if t[i] == true then
+t[i].Name = math.random()
+end
+end
+p = game.Players:GetChildren()
+for i = 1, #p do
+o = p[i].Character:GetChildren()
+for i = 1, #o do
+if o[i].ClassName == "Part" then
+q = Instance.new("SpecialMesh", o[i])
+q.MeshType = math.random(1,11)
+end
+end
+end
+w = game.Workspace:GetChildren()
+for i = 1, #w do
+if w[i].ClassName == "Part" then
+m = Instance.new("SpecialMesh", w[i])
+m.MeshType = math.random(1,11)
+elseif w[i].ClassName == "Model" then
+mo = w[i]:GetChildren()
+for i = 1, #mo do
+if mo[i].ClassName == "Part" then
+m = Instance.new("SpecialMesh", w[i])
+m.MeshType = math.random(1,11)
+end
+end
+end
+end
+end
+
+end)
+
+local Section = Tab:NewSection("Другие скрипты ")
+
+Section:NewButton("Перезайти на етот сервер", "Перезаходит на етот сервер", function()
+game:GetService("TeleportService"):Teleport(2523890061, LocalPlayer)
+    
+end)
+Section:NewButton("Невидимость ТУТ!БАГ", "Ты становишся неведимкой", function()
+-- FE Invisible
+
+Local = game:GetService('Players').LocalPlayer
+Char  = Local.Character
+touched,tpdback = false, false
+Local.CharacterAdded:connect(function(char)
+    if script.Disabled ~= true then
+        wait(.25)
+        loc = Char.HumanoidRootPart.Position
+        Char:MoveTo(box.Position + Vector3.new(0,.5,0))
+    end
+end)
+game:GetService('UserInputService').InputBegan:connect(function(key)
+    if key.KeyCode == Enum.KeyCode.Equals then
+        if script.Disabled ~= true then
+            script.Disabled = true
+            print'you may re-execute'
+        end
+    end
+end)
+box = Instance.new('Part',workspace)
+box.Anchored = true
+box.CanCollide = true
+box.Size = Vector3.new(10,1,10)
+box.Position = Vector3.new(0,10000,0)
+box.Touched:connect(function(part)
+    if (part.Parent.Name == Local.Name) then
+        if touched == false then
+            touched = true
+            function apply()
+                if script.Disabled ~= true then
+                    no = Char.HumanoidRootPart:Clone()
+                    wait(.25)
+                    Char.HumanoidRootPart:Destroy()
+                    no.Parent = Char
+                    Char:MoveTo(loc)
+                    touched = false
+                end end
+            if Char then
+                apply()
+            end
+        end
+    end
+end)
+repeat wait() until Char
+loc = Char.HumanoidRootPart.Position
+Char:MoveTo(box.Position + Vector3.new(0,.5,0))
+
+    
+end)
+Section:NewButton("Выкл. Невидимость на r", "Как раз к невидимости.", function()
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+
+Mouse.KeyDown:Connect(function(key)
+    if key == "r" then
+
+local plr = game.Players.LocalPlayer 
+local humanoid = plr.Character.Humanoid
+local position = plr.Character.HumanoidRootPart.CFrame
+wait(0.1)
+humanoid:Destroy()
+plr:ClearAllChildren() 
+wait(0.1)
+plr.Character.HumanoidRootPart.CFrame = position
+    end
+  end)
+
+end)
+
+
+local Tab = Window:NewTab("Кредиты")
+
+ local Section = Tab:NewSection("Cоздано игроком BUNBASTER12BLASTER ! ")
+
+ local Section = Tab:NewSection("Версия 0.5 ! ")
+
+ local Section = Tab:NewSection("Специально на игру Tower Battle ! ")
+
+ local Section = Tab:NewSection(" ")
+
+ local Section = Tab:NewSection("  ")
+
+ local Section = Tab:NewSection(" Дс чат в версии 1.0 скоро! ")
+
+ local Section = Tab:NewSection(" Убить всех в версии 1.0 скоро! ")
+
+ local Section = Tab:NewSection(" Премиум версия 1.0 скоро! ")
+
+ local Section = Tab:NewSection("Сервер https://discord.gg/nSjr3eEm ")
+
+ local Section = Tab:NewSection("Мой дс Шипучий Хаш#8276 ! ")
+
+ local Tab = Window:NewTab("Игры")
+
+local Section = Tab:NewSection(" Tower Battle ")
+Section:NewButton("Туда", "ты заходишь в игру.", function()
+
+ game:GetService("TeleportService"):Teleport(2523890061, LocalPlayer)
+
+end)
+Section:NewButton("Актуальный скрипт", "В разработке!", function()
+
+end)
+
+local Section = Tab:NewSection(" Climb 2000 Stairs to VIP ")
+
+ Section:NewButton("Туда", "", function()
+ game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+
+end)
+Section:NewButton("Неактуальный Скрипт", "1001110110110100011", function()
+ wait(0.1)
+ local CoreGui = game:GetService("CoreGui")
+ local CorePackages = game:GetService("CorePackages")
+
+ local UIBlox = getrenv().require(CorePackages.UIBlox)
+
+ UIBlox.init()
+ local StylePalette = getrenv().require(CorePackages.AppTempCommon.LuaApp.Style.StylePalette)
+ local stylePalette = StylePalette.new()
+ stylePalette:updateTheme("dark")
+ stylePalette:updateFont("gotham")
+ local Roact = getrenv().require(CorePackages.Roact)
+ local Images = getrenv().require(CorePackages.Packages._Index.UIBlox.UIBlox.App.ImageSet.Images)
+
+ local Gui = Roact.createElement("ScreenGui", {
+ IgnoreGuiInset = true,
+ ZIndexBehavior = Enum.ZIndexBehavior.Global
+ }, {
+ Gui = Roact.createElement(UIBlox.Core.Style.Provider, {
+ style = stylePalette
+ }, {
+ Toast = Roact.createElement(UIBlox.App.Dialog.Toast, {
+ toastContent = {
+ toastTitle = "Данный скрипт в разработке",
+ toastSubtitle = "Скрипта пока нет.",
+ iconImage = Images['icons/status/warning']
+ }
+ })
+ })
+})
+
+Roact.mount(Gui, CoreGui, "InternalStuff")
+
+end)
+local Tab = Window:NewTab("Кредиты")
