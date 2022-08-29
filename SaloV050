@@ -1,43 +1,21 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 
-local Window = Library.CreateLib("Сало скрипт (ержык)", "RJTheme1")
+local Window = Library.CreateLib("Сало скрипт (6.2)", "RJTheme8")
 
 local Tab = Window:NewTab("Игрок")
 
 local Section = Tab:NewSection("Скорость")
 
-Section:NewButton("Скорость обычная", "Изменяет скорость на обычную", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    
+Section:NewSlider("Изменить Скорость", "100001010101010", 240, 0, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
-Section:NewButton("Скорость 25", "Изменяет скорость на 25", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
-    
-end)
-
-Section:NewButton("Скорость 50", "Изменяет скорость на 50", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-
-end)
-Section:NewButton("Скорость 100", "Изменяет скорость на 100", function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-
-end)
 local Section = Tab:NewSection("Прыжок")
 
-Section:NewButton("Прыжок обичный", "Изменяет силу прыжка на обичный", function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-
+Section:NewSlider("Изменить Прыжок", "001001010101", 200, 0, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
-Section:NewButton("Прыжок 70", "Изменяет силу прыжка на 70", function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 70
 
-end)
-Section:NewButton("Прыжок 100", "Изменяет силу прыжка на 100.", function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
-
-end)
 local Section = Tab:NewSection("Разное")
 
 Section:NewToggle("Бексонечный прыжок", "Прыгай в воздухе", function(state)
@@ -74,55 +52,19 @@ end)
     end
 end)
 
-Section:NewButton("Крутитися 0", "Ну что могу сказать? Spin Spin Spin", function()
-power = 0
- 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
-end)
-Section:NewButton("Крутитися 50", "Ну что могу сказать? Spin Spin Spin", function()
-power = 50 
- 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 
-end)
-Section:NewButton("Крутитися 200", "Ну что могу сказать? Spin Spin Spin", function()
-power = 200 
- 
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(.1)
-local bambam = Instance.new("BodyThrust")
-bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-bambam.Force = Vector3.new(power,0,power)
-bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-
-end)
 local Tab = Window:NewTab("Телепорт")
+
+local Section = Tab:NewSection("К игроку")
+
+Section:NewTextBox("Ник игрока тут!", "Ники Ники", function(txt)
+   local ooooooof = txt
+   local plr1 = game.Players.LocalPlayer.Character
+   plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+end)
+
+ 
 
 local Section = Tab:NewSection("Башни низ")
 
@@ -315,23 +257,23 @@ end)
 
 local Tab = Window:NewTab("Кредиты")
 
- local Section = Tab:NewSection("Cоздано игроком BUNBASTER12BLASTER ! ")
+ local Section = Tab:NewSection("Cоздано игроком BUNBASTER12BLASTER !")
 
- local Section = Tab:NewSection("Версия 0.5 ! ")
+ local Section = Tab:NewSection("Версия 6.8 ! ")
 
- local Section = Tab:NewSection("Специально на игру Tower Battle ! ")
+ local Section = Tab:NewSection("Специально на игру Tower Battle ")
 
  local Section = Tab:NewSection(" ")
 
  local Section = Tab:NewSection("  ")
 
- local Section = Tab:NewSection(" Дс чат в версии 1.0 скоро! ")
+ local Section = Tab:NewSection("")
 
- local Section = Tab:NewSection(" Убить всех в версии 1.0 скоро! ")
+ local Section = Tab:NewSection("")
 
- local Section = Tab:NewSection(" Премиум версия 1.0 скоро! ")
+ local Section = Tab:NewSection(" ")
 
- local Section = Tab:NewSection("Сервер https://discord.gg/nSjr3eEm ")
+ local Section = Tab:NewSection(" ")
 
  local Section = Tab:NewSection("Мой дс Шипучий Хаш#8276 ! ")
 
@@ -350,7 +292,7 @@ end)
 local Section = Tab:NewSection(" Climb 2000 Stairs to VIP ")
 
  Section:NewButton("Туда", "", function()
- game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+ game:GetService("TeleportService"):Teleport(5229119, LocalPlayer)
 
 end)
 Section:NewButton("Неактуальный Скрипт", "1001110110110100011", function()
@@ -388,4 +330,4 @@ Section:NewButton("Неактуальный Скрипт", "1001110110110100011"
 Roact.mount(Gui, CoreGui, "InternalStuff")
 
 end)
-local Tab = Window:NewTab("Кредиты")
+local Tab = Window:NewTab("Чат")
